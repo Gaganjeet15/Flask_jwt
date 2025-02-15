@@ -14,8 +14,8 @@ A simple Flask app showing how to handle user registration, login, and JWT authe
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/flask-jwt-auth.git
-   cd flask-jwt-auth
+   git clone https://github.com/Gaganjeet15/Flask_jwt
+   cd app.py
    ```
 
 2. Set up your virtual environment:
