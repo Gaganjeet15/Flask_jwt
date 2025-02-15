@@ -3,10 +3,8 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import timedelta
 
-# Setting up the Flask app
 app = Flask(__name__)
 
-# Secret key for JWT (you should change this in real projects)
 
 # Set the access token expiry to 5 minutes
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=5)
@@ -23,7 +21,6 @@ def register():
     username = request.json.get('username')
     password = request.json.get('password')
 
-    # Basic validation
     if not username or not password:
         return jsonify({"msg": "Hey, you need to provide both username and password!"}), 400
 
@@ -42,7 +39,6 @@ def login():
     username = request.json.get('username')
     password = request.json.get('password')
 
-    # Basic validation
     if not username or not password:
         return jsonify({"msg": "Username and password are required!"}), 400
 
@@ -67,4 +63,4 @@ def home():
     
 if __name__ == '__main__':
     print("Script is running!")
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
